@@ -1,0 +1,29 @@
+<div class="scrollable">
+  <div class="scrollable-content">
+    <a href=""
+      ui-turn-on="loginModal"
+      class="btn btn-default">Show Login</a>
+    <div class="monitorAlerts">
+      <ul>
+        <li ng-repeat="alert in servers" ng-if="!alert.success" ng-click="serverDetails(alert)">
+        <!-- <li ng-repeat="alert in servers" ng-if="!alert.success"> -->
+          <span class="alertTitle">
+            {{alert.data.title}}
+          </span><br>
+            {{alert.data.description}}
+        </li>
+      </ul>
+    </div>
+
+    <div class="monitorList">
+      <ul>
+        <li id="{{server.data.title}}" class="monitor" ng-repeat="server in servers" ng-class="{'alertColor': server.success == false}"  ng-click="serverDetails(server)">{{server.data.title}}</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<div ui-content-for="modals">
+  <div ng-include="'login.html'"></div>
+</div>

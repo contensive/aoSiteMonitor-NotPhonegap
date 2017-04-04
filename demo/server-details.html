@@ -1,0 +1,29 @@
+<div ui-content-for="title">
+  <span>{{serverInfo.name}}{{serverInfo.data.title}}</span>
+</div>
+
+<div class="scrollable">
+  <div class="scrollable-content">
+    <div class="divSection">
+      <a class="returnBtn" href="#/"><i class="fa fa-chevron-left"></i> Monitors </a>
+    </div>
+    <div class="serverDetails">
+      Title: {{serverInfo.data.title}}<br>
+      Message: {{serverInfo.data.description}}<br>
+      <div class="siteList" ng-repeat="sites in serverInfo.sites">
+        <div class="siteSuccess" ng-class="{'siteFail': sites.success == false}">
+          <div class="siteUrl">
+            <a href="{{sites.url}}" target="_blank">{{sites.url}}</a>
+          </div>
+          <div class="siteName">{{sites.name}}</div>
+          <div>{{sites.description}}</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divSection">
+      <a class="returnBtn" href="#/"><i class="fa fa-chevron-left"></i> Monitors </a>
+    </div>
+
+  </div>
+</div>

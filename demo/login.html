@@ -1,0 +1,30 @@
+<div class="modal modal-overlay" ui-if="loginModal" ui-shared-state="loginModal" ng-controller="loginCtrl">
+  <div class="modal-dialog">
+    <div class="modal-content login-modal-wrapper">
+
+      <div class="login-bg modal-body">
+        <div class="siteMonitor-Title">Site Monitor</div>
+        <div class="login-form">
+          <form name="loginForm" ng-submit="submitLogin()">
+            <div class="login-form-input-holder">
+              <input type="text" placeholder="Username" ng-model="login.username" required>
+            </div>
+            <div class="login-form-input-holder">
+              <input type="password" placeholder="Password" ng-model="login.password" required>
+            </div>
+            <div class="login-form-input-holder">
+              <button type="submit" class="button button-block button-stable" ng-click="submitLogin()" ui-turn-off="loginModal">Login</button>
+            </div>
+            <div class="forgotPW">Forgot your username/password?</div>
+            <div class="" data-ng-show="login.error">
+              <div class="">
+                <span>{{login.errorMessage}}</span>
+              </div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

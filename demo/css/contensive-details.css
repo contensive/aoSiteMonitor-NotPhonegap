@@ -1,0 +1,83 @@
+body {font-family: 'Raleway', sans-serif;font-size: 18px;}
+
+/*Overrides Contensive Conflict of View*/
+ng-view.app-content, .app-content > ng-view {
+    height: calc(100vh - 51px);
+}
+
+.app-body {background: #fff;}
+a {}
+a:link {}
+a:hover {}
+a:visited {}
+div , p {font-family: 'Raleway', sans-serif; font-weight:400;}
+h1, h2, h3, h4, h5, h6 {font-family: 'Raleway', sans-serif;}
+h1 {font-size: 30px;}
+h2 {font-size: 24px;}
+h3 {font-size: 20px;}
+h4 {font-size: 16px;}
+h5 {font-size: 13px;}
+h6 {font-size: 10px;}
+
+/****************************** LOGIN PAGE ******************************/
+.modal-overlay .modal-content.login-modal-wrapper {background: #555; height:100vh;}
+.login-bg {}
+.login-bg {
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 360px
+}
+.siteMonitor-Title {font-size:22px; text-align: center; color: #999;margin-bottom: 55px;}
+.forgotPW {font-size:12px; text-align: center; color:#999;}
+.login-form input, .login-form button {
+  border-radius:25px; padding:7px 10px; margin-bottom: 20px; width:300px; max-width:90%; border: none;
+}
+.login-form button {color: #fff;
+    background: #7c7c7c;
+    background: -moz-linear-gradient(top, #7c7c7c 1%, #7580e5 100%);
+    background: -webkit-linear-gradient(top, #7c7c7c 1%,#7580e5 100%);
+    background: linear-gradient(to bottom, #7c7c7c 1%,#7580e5 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7c7c7c', endColorstr='#7580e5',GradientType=0 );
+  }
+.login-form-input-holder {text-align: center;}
+/****************************** HOME PAGE ******************************/
+.monitorAlerts {padding:15px; color: #4d4d4d;}
+.monitorAlerts ul {list-style: none; overflow: hidden; padding-left: 0;}
+.monitorAlerts ul li {width:100%; padding: 20px 15px; margin-bottom: 10px; background:rgba(255, 0, 0, 0.3); border: 3px solid red; border-radius: 4px;}
+.monitorAlerts .alertTitle {font-weight:bold;font-size:22px;}
+
+.monitorList {padding:15px;}
+.monitorList ul {list-style: none; overflow: hidden; padding-left: 0;text-align: center;}
+.monitorList ul li {
+  width:100px; height:100px; display:inline-block; background:#71c34a;
+  color:#fff; margin-right: 10px; margin-bottom: 15px; border-radius:3px;padding: 40px 0;padding: 25px 0;overflow: hidden;overflow-wrap: break-word;
+  }
+.monitorList ul li.alertColor {background:red;}
+.monitor:hover {cursor:pointer;}
+/****************************** SERVER DETAILS PAGE ******************************/
+.siteList {
+    width: calc(33% - 30px);
+    display: inline-block;
+    margin: 15px;
+}
+.siteList div {max-width:100%;}
+.siteSuccess {border: 1px solid #77cb17;background: rgba(119, 203, 23, 0.26);padding: 10px; color: #5aa800;}
+.siteFail {color:red; background:rgba(255, 0, 0, 0.3); border:1px solid red;}
+
+.serverDetails {padding:15px;}
+.siteUrl {font-weight:bold; text-align: center;}
+.siteUrl a {color:#565656;}
+.siteName {font-weight:bold; text-align: center;}
+.divSection {padding:15px;}
+.returnBtn {background: #a0dffb; border:1px solid #03a9f4;padding:10px; border-radius:3px;}
+
+@media screen and (max-width:1200px) {
+  .siteList {
+      width: calc(50% - 30px);
+      margin: 15px;
+  }
+}
