@@ -5,7 +5,8 @@
       class="btn btn-default">Show Login</a>
     <div class="monitorAlerts">
       <ul>
-        <li ng-repeat="alert in servers" ng-if="!alert.success" ng-click="serverDetails(alert)">
+        <li ng-repeat="alert in servers" ng-if="!alert.data.success" ng-click="serverDetails(alert)">
+        <!-- <li ng-repeat="alert in servers" ng-if="!alert.success" ng-click="serverDetails(alert)"> -->
         <!-- <li ng-repeat="alert in servers" ng-if="!alert.success"> -->
           <span class="alertTitle">
             {{alert.data.title}}
@@ -17,7 +18,12 @@
 
     <div class="monitorList">
       <ul>
-        <li id="{{server.data.title}}" class="monitor" ng-repeat="server in servers" ng-class="{'alertColor': server.success == false}"  ng-click="serverDetails(server)">{{server.data.title}}</li>
+        <!-- <li id="{{server.data.title}}" class="monitor" ng-repeat="server in servers" ng-class="{'alertColor': server.success == false}"  ng-click="serverDetails(server)">{{server.data.title}}</li> -->
+        <!-- <li id="id{{server}}" class="monitor" ng-repeat="server in servers" ng-class="{'alertColor': server.data.success == false}"  ng-click="serverDetails(server)">{{server.data.title}}</li> -->
+        <li id="id{{key}}" class="monitor" ng-repeat="(key, server) in servers" ng-class="{'alertColor': server.data.success == false}"  ng-click="serverDetails(server)">{{server.data.title}}
+          <div ng-controller="MonitorCtrl" ng-init="init(server)">{{title}}</div>
+        </li>
+
       </ul>
     </div>
   </div>
